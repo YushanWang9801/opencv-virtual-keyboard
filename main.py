@@ -11,6 +11,10 @@ cap = cv2.VideoCapture(0)
 cap.set(3, WIDTH)
 cap.set(4, HEIGHT)
 
+from cv2 import VideoWriter
+from cv2 import VideoWriter_fourcc
+video = VideoWriter('webcam.avi', VideoWriter_fourcc(*'MP42'), 25.0, (WIDTH, HEIGHT))
+
 detector = HandDetector(detectionCon=0.85)
 keyboard = Controller()
 
@@ -144,5 +148,11 @@ while True:
     success, img = cap.read()
     img = handle_capture(img)
     cv2.imshow("Image", img)
-    cv2.waitKey(1)
-    
+    video.write(img)
+    if cv2.waitKey(1) & 0xFF == 27: break
+
+cv2.destroyAllWindows()
+cap.release()
+video.release()
+
+
