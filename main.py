@@ -47,19 +47,21 @@ def handle_detection(detectionList, img):
                 img, is_click = draw_button_on_click(img, key, 
                                 detectionList[8][0], detectionList[8][1])
                 if is_click and finger_close:
+                    keyboard.press(key.text)
                     cv2.rectangle(img, key.pos, 
                         (key.pos[0]+key.size[0], key.pos[1]+key.size[1]), 
                         (0,0,0), cv2.FILLED)
                     cv2.putText(img, key.text, key.text_pos, 
                                     cv2.FONT_ITALIC, 1.0, (255, 255, 255), 2)
                     clickedText += key.text
-                    sleep(0.)
+                    sleep(0.2)
                     return img
     else:
         # Handle Num Key
         img, is_click = draw_button_on_click(img, Key.num_key, 
                                 detectionList[8][0], detectionList[8][1])
         if is_click and finger_close:
+            keyboard.press(key.text)
             num_lock = True
             sleep(0.2)
             return img
