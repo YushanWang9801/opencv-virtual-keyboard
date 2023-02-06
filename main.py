@@ -149,7 +149,7 @@ while True:
     img = handle_capture(img)
     cv2.imshow("Image", img)
     video.write(img)
-    if cv2.waitKey(1) & 0xFF == 27: break
+    if cv2.waitKey(1) & 0xFF == "q": break
 
 cv2.destroyAllWindows()
 cap.release()
