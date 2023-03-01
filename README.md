@@ -7,10 +7,10 @@ This is the Github repor for the openCV Virtual Keyboard Project.
 The tutorial of this project can be found on Medium or access with the following link:
 
 Tutorial Part 1:
-www.medium.com/.../
+https://medium.com/@wang33he77/create-a-virtual-keyboard-project-with-python-and-opencv-part-ii-2b4af5a6a3d9
 
 Tutorial Part 2:
-www.medium.com/.../
+https://medium.com/@wang33he77/create-a-virtual-keyboard-project-with-python-and-opencv-part-i-41824beb407e
 
 To run this project. First download as zip folder or use git clone.
 Please make sure you have the following packages installed:
